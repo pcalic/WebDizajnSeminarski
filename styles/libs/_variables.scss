@@ -1,0 +1,18 @@
+// Font.
+$font: (
+        family-title:                   ('Roboto Slab', sans-serif),
+        family-content:                 ('Open Sans', sans-serif),
+        weight:                         300,
+        weight-bold:                    600,
+        weight-heading:                 200,
+        weight-heading-bold:            700
+);
+
+// Palette.
+$palette: (
+        accent-color:                   #00cccc,
+        underline-color:                #EEEEEE,
+
+        text-dark-color:                #424242,
+        text-grey-color:                #616161
+);

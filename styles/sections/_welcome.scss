@@ -1,0 +1,59 @@
+#welcome-section {
+  height: 386px;
+  background: _palette(accent-color);
+  color: white;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include breakpoint(large) {
+      .call-to-action {
+        width: 40% !important;
+      }
+    }
+
+    @include breakpoint(xsmall) {
+      .call-to-action {
+        width: 80% !important;
+      }
+    }
+
+    .call-to-action {
+      width: 20%;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 50px;
+
+      img{
+        width: 300px;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-family: _font(family-title);
+        font-weight: _font(weight-bold);
+        padding-bottom: 10px;
+      }
+
+      p {
+        position: relative;
+        padding-bottom: 20px;
+        font-family: _font(family-content);
+        opacity: 0.7;
+        letter-spacing: 1px;
+
+        &:after {
+          display: flex;
+          align-items: center;
+          content: "";
+          height: 2px;
+          width: 40%;
+          margin: 20px auto 0 auto;
+          background: _palette(underline-color);
+        }
+      }
+    }
+  }
+}

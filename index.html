@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8" />
+        <title>WoW</title>
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="images/image.png">
+</head>
+    <body >
+        <!--Header -->
+        <header>
+            <!-- Navbar Wrapper -->
+            <div class="wrapper">
+                <div class="brand">
+                    <a class="brand-link" href="">
+                       <img alt="" class="brand-image" src="images/wow-icono.png" />
+                    </a>
+                </div>
+                <a href="#" class="collapse-button"><i class="icon ion-android-menu"></i></a>
+                <nav class="navbar">
+                    <ul class="main-nav">
+                        <li><a href="#careers-section" class="menu-item">Careers</a>
+                        <li><a href="#our-expansions-section" class="menu-item">Expansions</a>
+                        <li><a href="#game-section" class="menu-item">Game</a>
+                        <li><a href="#about-section" class="menu-item">About us</a>
+                        <li><a href="#contact-section" class="menu-item">Contact</a>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /.Navbar Wrapper -->
+        </header>
+        <!--./Header -->
+
+        <!--Main -->
+        <main>
+            <section id="welcome-section">
+                <div class="wrapper">
+                    <div class="call-to-action">
+                        <img alt="" class="careers-image" src="images/Warcraft.png" />
+                        <h1>World of Warcraft</h1>
+                        <p>The best game ever!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="careers-section">
+                <div class="wrapper">
+                    <div class="careers">
+                        <h2 class="careers-title">Careers</h2>
+                        <p class="careers-message">
+                            CREATE WORLDS!
+                            Join Blizzard and entertain the universe.
+
+                        </p>
+                    </div>
+                    <div class="careers-images">
+                        <div class="careers-card">
+                            <img alt="" class="careers-image" src="images/pic4.png" />
+                            <h3 class="careers-title">Disciplines</h3>
+                            <p class="careers-text">Blizzard has a wide selections of jobs extending far beyond traditional game creation roles. To craft entertainment experience,
+                                we rely on a well-rounded team of many disciplines,
+                                including a few you probably wouldn't expect!</p>
+                        </div>
+                        <div class="careers-card">
+                            <img alt="" class="careers-image" src="images/pic3.png" />
+                            <h3 class="careers-title">Team</h3>
+                            <p class="careers-text">Together, we're creating something bigger than what any of us could make on our own: entertainment that sets the standard,
+                                then goes beyond it. At Blizzard, we don't believe in putting boundaries around our imagination.</p>
+                        </div>
+                        <div class="careers-card">
+                            <img alt="" class="careers-image" src="images/pic2.png" />
+                            <h3 class="careers-title">Locations</h3>
+                            <p class="careers-text">Think globally! We've built our bases in locations where you'll want to live as well as work, and we've packed them with top-notch perks.</p>
+                        </div>
+                        <div class="careers-card">
+                            <img alt="" class="careers-image" src="images/pic1.png" />
+                            <h3 class="careers-title">Communication</h3>
+                            <p class="careers-text">Every voice matters! Great ideas come from everywhere; using them to inspire each other.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="our-expansions-section">
+                <div class="wrapper">
+                    <h1 class="expansions-title">World of Warcraft Expansions</h1>
+                    <div class="our-expansions-slide">
+                        <div class="expansions-card">
+                            <img src="images/Expansions/TBCLogo.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">The Burning Crusade</h4>
+                            </div>
+                        </div>
+                        <div class="expansions-card">
+                            <img src="images/Expansions/WrathLogo.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">Wrath of the Lich King</h4>
+                            </div>
+                        </div>
+                        <div class="expansions-card">
+                            <img src="images/Expansions/Cataclysmlogo.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">Cataclysm</h4>
+                            </div>
+                        </div>
+                        <div class="expansions-card">
+                            <img src="images/Expansions/MistsofPandariaLogo.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">Mists of Pandaria</h4>
+                            </div>
+                        </div>
+                        <div class="expansions-card">
+                            <img src="images/Expansions/Draenor.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">Warlords of Draenor</h4>
+                            </div>
+                        </div>
+                        <div class="expansions-card">
+                            <img src="images/Expansions/LegionLogo_lessglow.png" class="avatar" alt="avatar">
+                            <div class="expansions-wrapper">
+                                <h4 class="expansions-name">Legion</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="game-section">
+                <div>
+                    <h1 class="game-title">Game</h1>
+                    <canvas id="canvasGame"></canvas>
+                    <div class="gameButtons">
+                        <button onclick="restartGame()">Restart</button>
+                        <button id="start" onclick="startGame()">Start</button>
+                    </div>
+
+                    <script src="scripts/game.js"></script>
+
+                </div>
+            </section>
+
+            <section id="about-section">
+                <div class="wrapper">
+                    <div class="call-to-action">
+                        <h1>About us</h1>
+                        <img alt="" class="careers-image" src="images/Blizzard_Entertainment_Logo.svg.png" />
+                        <h2>American video game developer and publisher based in Irvine, California</h2>
+                        <p>The company was founded on February 8, 1991, under the name Silicon & Synapse, Inc.
+                            by three graduates of the University of California, Los Angeles, Michael Morhaime,
+                            Frank Pearce and Allen Adham. The company originally concentrated on the creation of game ports
+                            for other studios' games before beginning development of their own software in 1993 with games like
+                            Rock n' Roll Racing and The Lost Vikings. In 1994 the company became Chaos Studios, Inc.,
+                            then Blizzard Entertainment after being acquired by distributor Davidson & Associates.</p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="contact-section">
+                <div class="wrapper">
+                    <h2 class="contact-title">Contact us</h2>
+                    <p class="contact-message">For more information: </p>
+                    <a href="mailto:office@blizzard.com" class="contact-message contact-email">office@blizzard.com</a><br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.964881067565!2d-117.7693417850288!3d33.65807184584681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde82907fe8bb%3A0xcb7104743d635730!2sBlizzard+Entertainment!5e0!3m2!1ssr!2srs!4v1556539442015!5m2!1ssr!2srs" width="600" height="450" frameborder="0" style="border:0;padding-top: 20px;" allowfullscreen></iframe>                    <div class="find-us-via">
+                        <div class="social-networks">
+                            <a href="https://www.facebook.com/Warcraft/" target="_blank" class="contact-icon">
+                                <i class="icon ion-social-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/blizzardcs" target="_blank" class="contact-icon">
+                                <i class="icon ion-social-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/blizzard" target="_blank" class="contact-icon">
+                                <i class="icon ion-social-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--/.Main -->
+
+        <!--Footer -->
+        <footer>
+            <p class="copyright">&copy; Predrag Čalić <span id="year"></span>. All rights reserved.</p>
+        </footer>
+        <!--/.Footer -->
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <a href="#" id="scroll-top" class="fab"><i class="icon ion-chevron-up"></i></a>
+        <script src="node_modules/slick-carousel/slick/slick.js"></script>
+        <script src="scripts/base.js"></script>
+    </body>
+</html>

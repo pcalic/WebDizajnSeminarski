@@ -1,0 +1,104 @@
+#about-section {
+  height: 386px;
+  background: _palette(accent-color);
+  color: white;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include breakpoint(large) {
+      .call-to-action {
+        width: 40% !important;
+      }
+      h1{
+        padding-top:70px !important;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      h1{
+        padding-top:70px !important;
+      }
+    }
+
+    @include breakpoint(medium) {
+      h1{
+        padding-top:70px !important;
+      }
+    }
+
+    @include breakpoint(xsmall) {
+      .call-to-action {
+        width: 80% !important;
+      }
+      h1{
+        padding-top:20px !important;
+      }
+      img{
+        display:none;
+      }
+      p{
+        position: relative;
+        padding-bottom: 20px;
+        font-family: _font(family-content);
+        height: 100% !important;
+        width:100% !important;
+        margin-left:0px  !important;
+        letter-spacing: 1px;
+        font-size: 12px !important;
+      }
+    }
+
+    .call-to-action {
+      width: 20%;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 50px;
+
+      img{
+        height: 70px;
+        width: 150px;
+      }
+
+      h1 {
+        padding-top:50px;
+        font-size: 48px;
+        font-family: _font(family-title);
+        font-weight: _font(weight-bold);
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-family: _font(family-title);
+        font-weight: _font(weight-bold);
+        padding-bottom: 10px;
+        padding-top: 5px;
+
+      }
+
+      p {
+        position: relative;
+        padding-bottom: 20px;
+        font-family: _font(family-content);
+        opacity: 0.9;
+        height: 100%;
+        width:200%;
+        margin-left:-50%;
+        letter-spacing: 1px;
+
+        &:after {
+          display: flex;
+          align-items: center;
+          content: "";
+          height: 2px;
+          width: 40%;
+          margin: 20px auto 0 auto;
+          background: _palette(underline-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.slick-prev ,
+.slick-next {
+  transform: translate(0, -125%);
+
+  &:before {
+    font-size: 32px;
+  }
+}
+
+#our-expansions-section {
+  height: 650px;
+  background: _palette(accent-color);
+
+  .wrapper {
+    padding-top: 64px;
+    padding-bottom: 128px;
+
+    .expansions-title {
+      text-align: center;
+      color: #EEEEEE;
+      font-family: _font(family-title);
+      font-weight: 200;
+      font-size: 42px;
+      padding-bottom: 50px;
+
+      &:after {
+        content: "";
+        padding-top: 20px;
+        height: 2px;
+        width: 80%;
+        margin: 0 auto;
+        background: white;
+      }
+    }
+
+    .our-expansions-slide {
+      margin: 0 60px;
+
+      .expansions-card {
+        height: 450px;
+
+        img.avatar {
+          width: 300px;
+          height: 300px;
+          margin: 0 auto;
+          border-radius: 100%;
+          border: #00cccc 2px solid;
+        }
+
+        .expansions-wrapper {
+          padding: 30px;
+
+          .expansions-name {
+            font-size: 32px;
+            color: white;
+            font-family: _font(family-title);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .wrapper {
+      .our-expansions-slide {
+        .expansions-card {
+          img.avatar {
+            width: 275px;
+            height: 275px;
+          }
+
+          .expansions-wrapper {
+            .expansions-name {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    .wrapper {
+      .expansions-title {
+        font-size: 32px;
+      }
+    }
+
+    .wrapper {
+      .our-expansions-slide {
+        .expansions-card {
+          img.avatar {
+            width: 200px !important;
+            height: 200px !important;
+          }
+
+          .expansions-wrapper {
+            .expansions-name {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xxsmall) {
+    .wrapper {
+      .expansions-title {
+        font-size: 26px;
+      }
+    }
+
+    .wrapper {
+      .our-expansions-slide {
+        .expansions-card {
+          img.avatar {
+            width: 200px !important;
+            height: 200px !important;
+          }
+        }
+      }
+    }
+  }
+}

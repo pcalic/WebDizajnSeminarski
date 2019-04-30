@@ -1,0 +1,15 @@
+{
+ "name": "web-dizajn",
+ "version": "1.0.0",
+ "license": "GPL",
+ "author": "Predrag Calic",
+ "private": true,
+ "dependencies": {
+  "jquery": "^3.2.1",
+  "slick-carousel": "^1.6.0",
+  "node-sass": "^4.7.2"
+ },
+ "scripts": {
+  "scss": "node-sass --watch styles -o css"
+ }
+}

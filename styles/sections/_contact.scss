@@ -1,0 +1,109 @@
+#contact-section {
+  text-align: center;
+
+  .contact-title {
+    font-size: 42px;
+    font-family: _font(family-content);
+    font-weight: _font(weight-heading);
+    color: _palette(accent-color);
+    letter-spacing: 1px;
+    padding-bottom: 35px;
+    padding-top: 50px;
+  }
+
+  .contact-message {
+    text-align: center;
+    font-size: 18px;
+    width: 40%;
+    margin: 0 auto;
+    font-family: _font(family-title);
+    color: _palette(text-dark-color);
+    padding: 5px;
+
+    &.contact-email {
+      text-decoration: none;
+      color: _palette(accent-color);
+      font-weight: _font(weight-bold);
+    }
+  }
+  img{
+    height: 100px;
+    padding-bottom: 5px;
+  }
+
+  .social-networks {
+    padding: 98px 0;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 30%;
+
+
+    a {
+      position: relative;
+      margin: 0 15px;
+      display: inline-block;
+      background: _palette(accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 100%;
+      font-size: 30px;
+      height: 60px;
+      width: 60px;
+      @include vendor('transition', 'all ease .8s');
+
+      i.icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        display: block;
+      }
+
+      &:visited, &:active {
+        text-decoration: none;
+      }
+
+      &:hover {
+        box-shadow: inset 100px 0 0 0 #0066cc;
+        color: #eeeeee;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .social-networks {
+      width: 50%;
+    }
+    iframe{
+      width: 400px !important;
+      height: 300px !important;
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    .contact-title {
+      font-size: 32px;
+    }
+
+    .contact-message {
+      width: 80%;
+    }
+
+    .social-networks {
+      width: 75%;
+    }
+
+    iframe{
+      width: 300px !important;
+      height: 200px !important;
+    }
+  }
+
+  @include breakpoint(xxsmall) {
+    .social-networks {
+      width: 90%;
+    }
+  }
+}

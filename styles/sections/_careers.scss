@@ -1,0 +1,105 @@
+#careers-section {
+
+  .careers {
+    padding: 128px 0;
+    width: 100%;
+    color: _palette(text-dark-color);
+    text-align: center;
+
+    .careers-title {
+      font-size: 40px;
+      font-family: _font(family-title);
+      font-weight: _font(weight-bold);
+      padding-bottom: 50px;
+    }
+
+    .careers-message {
+      font-size: 20px;
+      font-family: _font(family-content);
+      color: _palette(text-grey-color);
+      font-weight: 400;
+      line-height: 30px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 920px;
+
+      &:after {
+        display: block;
+        content: "";
+        background: _palette(accent-color);
+        margin: 50px auto 0 auto;
+        height: 2px;
+        width: 30%;
+      }
+    }
+  }
+
+  .careers-images {
+
+    .careers-card {
+      height: 360px;
+      font-family: _font(family-content);
+      text-align: center;
+      display: inline-block;
+      overflow: hidden;
+      width: 24.7%;
+
+      .careers-title {
+        font-size: 24px;
+        padding-top: 20px;
+        font-weight: _font(weight-bold);
+        color: _palette(accent-color);
+      }
+
+      .careers-text {
+        font-size: 16px;
+        line-height: 20px;
+        width: 75%;
+        margin: 20px auto;
+        text-align: center;
+        font-style: italic;
+        color: _palette(text-grey-color);
+      }
+
+      .careers-image {
+        width: 144px;
+        height: 144px;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .careers {
+      .careers-title {
+        font-size: 32px;
+      }
+
+      .careers-message {
+        width: 80% !important;
+        font-size: 16px;
+      }
+    }
+
+    .careers-images {
+      .careers-card {
+        width: 49.7%;
+
+        .careers-title {
+          font-size: 20px;
+        }
+
+        .careers-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    .careers-images {
+      .careers-card {
+        width: 100%;
+      }
+    }
+  }
+}
