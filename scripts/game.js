@@ -206,6 +206,6 @@ function restartGame(){
     monsterReady=true;
     heroReady=true;
     monstersCaught = 0;
-    
+
     reset();
 }
