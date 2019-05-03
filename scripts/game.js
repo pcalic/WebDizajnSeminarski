@@ -1,4 +1,3 @@
-
 var canvas = document.getElementById("canvasGame");
 var ctx = canvas.getContext("2d");
 canvas.width = 512;
@@ -12,21 +11,25 @@ bgImage.onload = function () {
 };
 bgImage.src = "images/background.png";
 var heroReady = false;
-var heroImage = new Image();
+var heroImage = new Image(60,60);
 heroImage.onload = function () {
     heroReady = true;
 };
 heroImage.src = "images/hero.png";
 var monsterReady = false;
-var monsterImage = new Image();
+var monsterImage = new Image(60,60);
 monsterImage.onload = function () {
     monsterReady = true;
 };
 monsterImage.src = "images/monster.png";
+
+var deadBodyImg = new Image(60,60);
+deadBodyImg.src = "images/dead.png";
 var hero = {
     speed: 256
 };
 var monster = {};
+var deadBody = {};
 var monstersCaught = 0;
 var keysDown = {};
 addEventListener("keydown", function (key) {
@@ -66,20 +69,35 @@ var update = function (modifier) {
         && hero.y <= (monster.y + 32)
         && monster.y <= (hero.y + 32)
     ) {
+        deadBody.x = monster.x;
+        deadBody.y = monster.y;
         ++monstersCaught;
         reset();
     }
 };
+
 var render = function () {
     if (bgReady) {
         ctx.drawImage(bgImage, 0, 0);
     }
     if (heroReady) {
-        ctx.drawImage(heroImage, hero.x, hero.y);
+        if(39 in keysDown){
+            ctx.drawImage(heroImage, 60, 60, 60, 60,  hero.x, hero.y, 60, 60);
+        }else if (38 in keysDown){
+            ctx.drawImage(heroImage, 0, 0, 60, 60,  hero.x, hero.y, 60, 60);
+        }else if (40 in keysDown){
+            ctx.drawImage(heroImage, 300, 340, 60, 60,  hero.x, hero.y, 60, 60);
+        }else if (37 in keysDown){
+            ctx.drawImage(heroImage, 300, 460, 60, 60,  hero.x, hero.y, 60, 60);
+        }else {
+            ctx.drawImage(heroImage, 300, 0, 60, 60,  hero.x, hero.y, 60, 60);
+        }
     }
     if (monsterReady) {
-        ctx.drawImage(monsterImage, monster.x, monster.y);
+        ctx.drawImage(monsterImage, 240, 0, 60, 60,  monster.x, monster.y, 60, 60);
     }
+    ctx.drawImage(deadBodyImg, 0, 0, 60, 60, deadBody.x, deadBody.y, 60, 60);
+
     ctx.fillStyle = "rgb(250, 250, 250)";
     ctx.font = "24px Helvetica";
     ctx.textAlign = "left";
@@ -89,7 +107,6 @@ var render = function () {
     if(finished==true){
         ctx.fillText("Game over!", 200, 220);
     }
-
 };
 function getRandomArbitrary() {
     return Math.random() * (2000 - 1) + 1;
@@ -189,5 +206,6 @@ function restartGame(){
     monsterReady=true;
     heroReady=true;
     monstersCaught = 0;
+    
     reset();
 }
