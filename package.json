@@ -5,7 +5,7 @@
  "author": "Predrag Calic",
  "private": true,
  "dependencies": {
-  "jquery": "^3.2.1",
+  "jquery": "^3.5.0",
   "slick-carousel": "^1.6.0",
   "node-sass": "^4.7.2"
  },
